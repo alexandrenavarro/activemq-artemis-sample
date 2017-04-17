@@ -22,7 +22,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-	@JmsListener(destination = "sample.queue")
+	//@JmsListener(destination = "jms.queue.orders")
 	public void receiveQueue(String text) {
 		System.out.println("receive from queue:" + text);
 	}

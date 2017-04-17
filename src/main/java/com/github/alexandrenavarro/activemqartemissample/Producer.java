@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 import javax.jms.Queue;
 
 @Component
-public class Producer implements CommandLineRunner {
+public class Producer /*implements CommandLineRunner*/ {
 
 	@Autowired
 	private JmsMessagingTemplate jmsMessagingTemplate;
@@ -32,7 +32,7 @@ public class Producer implements CommandLineRunner {
 	@Autowired
 	private Queue queue;
 
-	@Override
+	//@Override
 	public void run(String... args) throws Exception {
 
 		System.out.println("Message will be sent to the Queue");
