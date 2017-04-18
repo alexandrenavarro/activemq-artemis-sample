@@ -1,5 +1,5 @@
 <rest-messaging>
-    <server-in-vm-id>1</server-in-vm-id>
+    <server-in-vm-id>0</server-in-vm-id>
     <use-link-headers>false</use-link-headers>
     <default-durable-send>false</default-durable-send>
     <dups-ok>true</dups-ok>

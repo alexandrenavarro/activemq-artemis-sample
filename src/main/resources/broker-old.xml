@@ -1,16 +1,16 @@
 <configuration xmlns="urn:activemq" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:activemq /schema/artemis-server.xsd">
-
-
-
     <core xmlns="urn:activemq:core">
-        <persistence-enabled>false</persistence-enabled>
+        <!--persistence-enabled>false</persistence-enabled-->
         <security-enabled>false</security-enabled>
 
         <acceptors>
-            <acceptor name="in-vm">vm://1</acceptor>
-            <acceptor name="netty">tcp://localhost:61616</acceptor>
+            <acceptor name="in-vm">vm://0</acceptor>
+            <!--acceptor name="netty">tcp://localhost:61616</acceptor-->
         </acceptors>
         <addresses>
+            <address name="orders2">
+                <multicast></multicast>
+            </address>
             <address name="orders">
                 <anycast>
                     <queue name="jms.queue.orders"/>
